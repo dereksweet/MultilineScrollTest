@@ -30,14 +30,9 @@ export default class App extends React.Component {
             multiline
             value={this.state.textValue}
             style={{flex: 1, width: '100%', borderWidth: 1, borderColor: 'red'}}
-            underlineColorAndroid='transparent'
-            placeholder="Type your joke notes here..."
-            autoComplete={false}
-            onScroll={function() { console.log('scrolling') }}
-            onFocus={function() { console.log('focusing') }}
-            onChangeText={(text) => {
-              this.setState({textValue: text})
-            }}
+            onScroll={function() {console.log('scrolling')}}
+            onFocus={function() {console.log('focusing')}}
+            onChangeText={(text) => {this.setState({textValue: text})}}
           />
         </View>
       </View>
